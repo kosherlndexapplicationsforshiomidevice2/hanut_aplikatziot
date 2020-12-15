@@ -32,7 +32,8 @@
 
 body {
   background-color: #f1f1f1;
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-family: Arial;
 }
 
@@ -111,12 +112,12 @@ h1 {
 
 <div id="myBtnContainer">
   
-   <button class="btn" onclick="filterSelection('media')">מדיה</button> 
+   <button class="btn" autofocus onclick="filterSelection('media')">מדיה</button> 
   <button class="btn" onclick="filterSelection('tools')">עזרים</button>
   <button class="btn" onclick="filterSelection('games')">משחקים</button>
   <button class="btn" onclick="filterSelection('books')">ספרי קודש</button>
   <button class="btn" onclick="filterSelection('gapps')">אפליקציות גוגל</button>
-  <button class="btn active" autofocus onclick="filterSelection('all')">כל היישומים</button>
+  <button class="btn active" onclick="filterSelection('all')">כל היישומים</button>
 </div>
 
 <!-- Portfolio Gallery Grid -->
