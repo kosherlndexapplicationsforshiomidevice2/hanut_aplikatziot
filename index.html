@@ -92,7 +92,7 @@ h1 {
   border-radius: 8px;
 }
 
-.btn:focus {
+.btn:hover {
   background-color: #ddd;
 }
 
@@ -110,17 +110,20 @@ h1 {
 <h2>חנות אפליקציות</h2>
 
 <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')">הכל</button>
-  <button class="btn" onclick="filterSelection('apps')">יישומים</button>
+  
+   <button class="btn" onclick="filterSelection('media')">מדיה</button> 
+  <button class="btn" onclick="filterSelection('tools')">עזרים</button>
   <button class="btn" onclick="filterSelection('games')">משחקים</button>
-  <button class="btn" onclick="filterSelection('books')">ספרים</button>
+  <button class="btn" onclick="filterSelection('books')">ספרי קודש</button>
+  <button class="btn" onclick="filterSelection('gapps')">אפליקציות גוגל</button>
+  <button class="btn active" onclick="filterSelection('all')">הכל</button>
 </div>
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
 				
 <!-- Google Play Services 
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>שירותי גוגל פליי</h3>
 <img src="assets/logos/services_logo.png" width="180" height="180">
 <p>יש לעדכן לעיתים את שירותי גוגל כדי לאפשר את הפעלת היישומים המבקשים אותם.</p>
@@ -128,196 +131,196 @@ h1 {
 -->
   
 <!-- CLEANER -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>ניקוי קבצים מיותרים</h3>
 <img src="assets/logos/cleaner_logo.png" width="128" height="128">
 <p>המכשיר מאחסן בתוכו את קבצי ההתקנות של האפליקציות, וכן קבצים מיותרים נוספים. מומלץ להשתמש במנקה הקבצים כדי לחסוך מקום באיחסון הפנימי.</p>
 <a href="https://dl.dropboxusercontent.com/s/5v7mjsc4v22dy6m/Cleaner.apk" class="button">לחץ להורדת המנקה</i></a></div></div>
 
 <!-- Gmail web -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Gmail בתצוגת אתר</h3>
 <img src="assets/logos/gmail_logo.png" width="150" height="150">
 <p>שימו לב! אפליקציה זו נועדה למי שאינו מצליח להתחבר לחשבון גוגל שלו דרך האפליקציה המובנית במכשיר. אפליקציה זאת מופעלת על ידי תצוגת אתר אינטרנט ולא תקבלו התראות למכשיר כשתקבלו מייל חדש. יש להיכנס מדי פעם לאפליקציה ולבדוק ידנית אם קיבלתם מייל חדש. יש להפעיל שליטת עכבר באפליקציה.</p>
 <a href="https://dl.dropboxusercontent.com/s/5gd78uvyxz2uudy/Gmail.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- WAZE -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>Waze - נסיעה בדרכים</h3>
 <img src="assets/logos/waze_logo.png" width="180" height="180">
 <p>Waze היא אפליקציית הניווט ודיווחי התנועה הגדולה בעולם המתבססת על קהילת משתמשים.</p>
 <a href="https://dl.dropboxusercontent.com/s/p7kk7uwmeaqbtrx/Waze.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MOOVIT -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>Moovit - תחבורה ציבורית</h3>
 <img src="assets/logos/moovit_logo.png" width="160" height="160">
 <p>מוביט מספקת לוחות זמנים עדכניים כפי שמפרסמות מפעילות התחבורה הציבורית, ובנוסף, גם את זמני ההגעה בזמן אמת של הקו, במקרים בהם על הקו מותקן מכשיר GPS.</p>
 <a href="https://dl.dropboxusercontent.com/s/xu7zq7tsktrd0ow/Moovit.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- PANGO -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>Pango - פנגו</h3>
 <img src="assets/logos/pango_logo.png" width="160" height="160">
 <p>אפליקציית חניה מתקדמת שמונעת דוחות וחוסכת זמן וכסף. חניה מהנייד בכחול לבן, שירות טסט וטיפול עד הבית, יציאה מהירה מחניונים ועוד מגוון פתרונות לנהג ולרכב.</p>
 <a href="https://dl.dropboxusercontent.com/s/91wcgv6x1gyc1zo/Pango.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- BANKS -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>בנקים</h3>
 <img src="assets/logos/banks_logo.png" width="160" height="160">
 <p>כל אתרי הבנקים מותאם לשיאומי מקשים</p>
 <a href="https://dl.dropboxusercontent.com/s/8mb5w8cm0ffoh9q/Banks.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MIZRAHI -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>מזרחי טפחות</h3>
 <img src="assets/logos/mizrahi_logo.png" width="144" height="144">
 <p>בנק מזרחי טפחות מותאם לשיאומי מקשים.</p>
 <a href="https://dl.dropboxusercontent.com/s/alazvlht924efhq/Mizrahi.apk" class="button"><i class="fa fa-download"></i></a></div></div>
  
 <!-- PEPPER -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>Pepper</h3>
 <img src="assets/logos/pepper_logo.png" width="144" height="144">
 <p>בנק פפר מותאם לשיאומי מקשים.</p>
 <a href="https://dl.dropboxusercontent.com/s/n2r3rfm8353pnlm/Pepper.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Jewish Music -->
-<div class="column apps">
+<div class="column media">
     <div class="content"> <h3>רדיו Jewish Music</h3>
 <img src="assets/logos/jewishradio_logo.png" width="160" height="160">
 <p>רדיו עם שירים יהודיים מותאם במיוחד לשיאומי מקשים. ניתן להפעלה גם ברקע.</p>
 <a href="https://dl.dropboxusercontent.com/s/7d6ww9967zv57e6/JewishMusic.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- RadioFM Israel -->
-<div class="column apps">
+<div class="column media">
     <div class="content"> <h3>רדיו FM ישראל</h3>
 <img src="assets/logos/radiofm_logo.png" width="144" height="144">
 <p>רדיו FM ישראל עם כל תחנות הרדיו בישראל.</p>
 <a href="https://dl.dropboxusercontent.com/s/zfcy7qs78fxkfd1/RadioFM.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Jradio -->
-<div class="column apps">
+<div class="column media">
     <div class="content"> <h3>תחנות רדיו יהודי</h3>
 <img src="assets/logos/jradio_logo.png" width="160" height="160">
 <p>תחנות רדיו נוספות עם שירים יהודיים מותאם במיוחד לשיאומי מקשים. ניתן להפעלה גם ברקע.</p>
 <a href="https://dl.dropboxusercontent.com/s/0gqcqkeqgdvc1ig/Jradio.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- VLC Player -->
-<div class="column apps">
+<div class="column media">
     <div class="content"> <h3>נגן מדיה VLC</h3>
 <img src="assets/logos/vlc_logo.png" width="160" height="160">
 <p>נגן המדיה הכי טוב למכשיר להאזנת שמע וצפייה בוידאו. יש אפשרות מובנית של סיבוב מסך.</p>
 <a href="https://dl.dropboxusercontent.com/s/vr0kh6dt8b432w2/VLC%20Player.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- ME -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>זיהוי שיחות - Me</h3>
 <img src="assets/logos/me_logo.png" width="160" height="160">
 <p>מי היא אפליקציית זיהוי השיחות והגנה מפני ספאם הטובה ביותר עבור האנדרואיד.</p>
 <a href="https://dl.dropboxusercontent.com/s/e6j8zxc19nzha13/Me.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- דואר ישראל -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>דואר ישראל</h3>
 <img src="assets/logos/israelpost_logo.png" width="180" height="180">
 <p>מעקב משלוחים, איתור מיקוד, ושירותים נוספים באפליקציה של דואר ישראל.</p>
 <a href="https://dl.dropboxusercontent.com/s/cwahgge2ygw9myb/Israel%20Post.apk" class="button"><i class="fa fa-download"></i></a></div></div>
  
 <!-- GOOGLE MAPS  -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Google Maps - מפות</h3>
 <img src="assets/logos/maps_logo.png" width="180" height="180">
 <p>מפות גוגל לשיאומי מקשים. יש להפעיל שליטת עכבר באפליקציה. הטעינה הראשונה לוקחת קצת זמן.</p>
 <a href="https://dl.dropboxusercontent.com/s/qneu0ou8e2wrq7y/Google%20Maps.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE TRANSLATE  -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Google Translate - תרגום שפות</h3>
 <img src="assets/logos/translate_logo.png" width="180" height="180">
 <p>תרגום טקסט בין 103 שפות באמצעות הקלדה, הקלטה, ודרכים נוספות. אפשר להוריד את המילונים ולהשתמש בתרגום אף ללא חיבור אינטרנט.</p>
 <a href="https://dl.dropboxusercontent.com/s/hxiod3zjn39o64y/GoogleTranslate.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- PDF Reader -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>קורא PDF</h3>
 <img src="assets/logos/pdf_logo.png" width="160" height="160">
 <p>קורא קבצי PDF. יש להפעיל שליטת עכבר באפליקציה. ניתן לעשום זום בתוך המסמך על ידי לחיצה על מקש הניווט האמצעי + מקש לאחד הצדדים, ואז יופיעו כפתורי הזום.</p>
 <a href="https://dl.dropboxusercontent.com/s/lq3nsofzgcsnd7t/PDF.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE KEEP  -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Google Keep - הערות גוגל</h3>
 <img src="assets/logos/keep_logo.png" width="192" height="192">
 <p>הוספת הערות, רשימות ותמונות ל- Google Keep. אפשר גם להקליט תזכיר קולי ולמצוא אותו אחר כך בקלות בחיפוש הערות.</p>
 <a href="https://dl.dropboxusercontent.com/s/u7dzka92dlp8qyk/Keep.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE CALENDAR -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Google Calendar - יומן גוגל</h3>
 <img src="assets/logos/calendar_logo.png" width="192" height="192">
 <p>דרכים שונות לצפייה ביומן שלך - עבור במהירות בין תצוגת חודש, שבוע ויום. אירועים מ- Gmail מתווספים אוטומטית ללוח השנה שלך.</p>
 <a href="https://dl.dropboxusercontent.com/s/hrdtvtvpt08c6js/GoogleCalendar.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE PHOTOS -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Google Photos - תמונות גוגל</h3>
 <img src="assets/logos/photos_logo.png" width="180" height="180">
 <p>תמונות השמורות באיחסון של חשבון גוגל</p>
 <a href="https://dl.dropboxusercontent.com/s/uz8g7ri2s81udx4/Google%20Photos.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HANGOUTS -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>Hangouts - הנגאאוט</h3>
 <img src="assets/logos/hangouts_logo.png" width="180" height="180">
 <p>Hangouts הוא שירות מסרים מיידיים, שיחות קוליות ווידאו-צ'אט, המוצע חינם למשתמשי גוגל.</p>
 <a href="https://dl.dropboxusercontent.com/s/tw514fx7q4hdqhx/Hangouts.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOLAN TELECOM -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>גולן טלקום</h3>
 <img src="assets/logos/golan_logo.png" width="180" height="180">
 <p>גולן טלקום לשיאומי מקשים</p>
 <a href="https://dl.dropboxusercontent.com/s/skjpfhg86ak1u79/Golan.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Google Logout -->
-<div class="column apps">
+<div class="column gapps">
     <div class="content"> <h3>התנתקות מחשבון גוגל</h3>
 <img src="assets/logos/logout_logo.png" width="120" height="120">
 <p>שימו לב: האפליקציה מנתקת את המכשיר מכל חשבונות גוגל. אך החשבונות עדיין יהיו מוצגים ושמורים במכשיר. כדי להיכנס לחשבון שוב, תצטרכו לאמת את הסיסמא בלבד כדי להיכנס מחדש.</p>
 <a href="https://dl.dropboxusercontent.com/s/5ohi88tg2u20a75/Google%20Logout.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Foldplay -->
-<div class="column apps">
+<div class="column media">
     <div class="content"> <h3>Foldplay - נגן תיקייה</h3>
 <img src="assets/logos/foldplay_logo.png" width="180" height="180">
 <p>נגן שירים לפי תיקיית קבצים</p>
 <a href="https://dl.dropboxusercontent.com/s/n7rzqn2jatclnjx/Foldplay.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Wallpapers -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>רקעים לשיאומי</h3>
 <img src="assets/logos/wallpapers_logo.png" width="180" height="180">
 <p>רקעים יפים לשיאומי מקשים. הוספתי גם תמונות של צדיקים. ניתן להשתמש באפליקציה באמצעות המקשים.</p>
 <a href="https://dl.dropboxusercontent.com/s/w1a5bmslq8ojd2i/Wallpapers.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- File Manager -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>מנהל קבצים+</h3>
 <img src="assets/logos/filemanager_logo.png" width="180" height="180">
 <p>מנהל קבצים מתקדם לשיאומי מקשים</p>
 <a href="https://dl.dropboxusercontent.com/s/u4jpdvbzs89e103/FileManager%2B.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- ColorNote -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>פתקים - ColorNote</h3>
 <img src="assets/logos/colornote_logo.png" width="180" height="180">
 <p>אפליקציה נוחה מאוד לכתיבת פתקים, רשימות והערות.</p>
 <a href="https://dl.dropboxusercontent.com/s/exkpu73w1vaednn/ColorNote.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SoundAbout -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>תיקון בעיה באוזניות</h3>
 <img src="assets/logos/soundabout_logo.png" width="92" height="92">
 <p>נא להוריד רק אם קרה לכם את הבעיה של האוזניה!
@@ -327,63 +330,63 @@ h1 {
 <a href="https://dl.dropboxusercontent.com/s/d6lxa4i106h06cw/SoundAbout.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Volume Control -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>שליטה בווליום עם העכבר</h3>
 <img src="assets/logos/volume_logo.png" width="160" height="160">
 <p>היכנס לאפליקציה ויופיע לך על המסך כפתורים לשליטה בעוצמת הווליום באמצעות העכבר.</p>
 <a href="https://dl.dropboxusercontent.com/s/tbgg03651up0fdl/VolumeControl.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Rotate Control -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>סיבוב מסך</h3>
 <img src="assets/logos/rotate_logo.png" width="160" height="160">
 <p>אפליקציה לשליטה על סיבוב מסך התצוגה באפליקציות.</p>
 <a href="https://dl.dropboxusercontent.com/s/6lob3lc38624ggu/RotationControl.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Vibrate Control -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>שליטה ברטט</h3>
 <img src="assets/logos/vibrate_logo.png" width="160" height="160">
 <p>אפליקציה לשליטה על הרטט בשימוש האפליקציות. אפשר למשל להאריך את משך הרטט בתזכורת של הלוח שנה.</p>
 <a href="https://dl.dropboxusercontent.com/s/wk8jh11ew35rt55/VibrateControl.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Bluetooth Contacts -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>העברת אנשי קשר בבלוטוס</h3>
 <img src="assets/logos/bluetooth_logo.png" width="180" height="180">
 <p>אפליקציה להעברת אנשי קשר באמצעות הבלוטוס. ניתן להעביר אנשי קשר גם ממכשירי הנוקיה הפשוטים. נא להפעיל שליטת עכבר כדי שתוכלו לבחור באחד המכשירים הגלויים ברשימה.</p>
 <a href="https://dl.dropboxusercontent.com/s/nqz6774m3kap014/BluetoothContacts.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Guitar Tuner -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>מכוון גיטרה</h3>
 <img src="assets/logos/gtuner_logo.png" width="144" height="144">
 <p>כיוון גיטרה בדרך פשוטה ונוחה באמצעות המכשיר. יש להפעיל שליטת עכבר באפליקציה כדי ללחוץ על התפריט.</p>
 <a href="https://dl.dropboxusercontent.com/s/tjwk8ycnpshvh7u/GuitarTuner.apk" class="button"><i class="fa fa-download"></i></a></div></div>
  
 <!-- Kikar Hashabat -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>כיכר השבת</h3>
 <img src="assets/logos/kikar_logo.png" width="180" height="180">
 <p>אתר החדשות והתוכן לציבור הדתי</p>
 <a href="https://dl.dropboxusercontent.com/s/xl4wp650rm9mkip/KikarHashabat.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- BHADRE HADARIM -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>בחדרי חרדים</h3>
 <img src="assets/logos/bh_logo.png" width="180" height="180">
 <p>אתר חדשות לציבור הדתי</p>
 <a href="https://dl.dropboxusercontent.com/s/6vui5ym4dxn70xa/Bh.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HebDate -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>לוח שנה עברי</h3>
 <img src="assets/logos/hebdate_logo.png" width="156" height="156">
 <p>לוח שנה עברי<br>יש להפעיל שליטת עכבר באפליקציה</p>
 <a href="https://dl.dropboxusercontent.com/s/c5pb4um299wqjv3/HebDate.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HebrewBar -->
-<div class="column apps">
+<div class="column tools">
     <div class="content"> <h3>עברי על הבר</h3>
 <img src="assets/logos/hebrewbar_logo.png" width="144" height="144">
 <p>הצגת התאריך העברי בשורת ההתראות. ניתן גם להציג את זמני היום לפי איזור המגורים.</p>
@@ -404,14 +407,14 @@ h1 {
 <a href="https://dl.dropboxusercontent.com/s/mw93es5sk35rs04/OnYourWay.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Arutz Meir -->
-<div class="column books">
+<div class="column media">
     <div class="content"> <h3>ערוץ מאיר</h3>
 <img src="assets/logos/meir_logo.png" width="160" height="160">
 <p>שיעורי תורה להאזנה בכל הנושאים והעניינים. תורת ארץ ישראל.</p>
 <a href="https://dl.dropboxusercontent.com/s/jgk1ta2yva7ym7a/Meir.apk" class="button"><i class="fa fa-download"></i></a></div></div>
   
 <!-- Arutz 2000 -->
-<div class="column books">
+<div class="column media">
     <div class="content"> <h3>ערוץ 2000</h3>
 <img src="assets/logos/2000_logo.png" width="160" height="160">
 <p>שיעורי תורה נוספים להאזנה.</p>
@@ -469,7 +472,7 @@ h1 {
 <a href="https://dl.dropboxusercontent.com/s/cq91kvfav7vazqf/ToratYashiyahu.apk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HIDABROOT -->
-<div class="column books">
+<div class="column media">
     <div class="content"> <h3>הידברות</h3>
 <img src="assets/logos/hidabroot_logo.png" width="170" height="170">
 <p>הידברות - מכון היהדות הגדול בעולם</p>
