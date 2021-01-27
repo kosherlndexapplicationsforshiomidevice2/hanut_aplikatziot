@@ -58,6 +58,11 @@ body {
   display: none; /* Hide all elements by default */
 }
 
+.column  {
+
+display: none;
+}
+
 /* Clear floats after rows */ 
 .row:after {
   content: "";
@@ -78,6 +83,7 @@ body {
 }
 
 /* Style the buttons */
+
 .btn {
   border: none;
   outline: none;
@@ -110,7 +116,7 @@ body {
 <div id="myBtnContainer">
   <button class="btn"  onclick="filterSelection('media')">מדיה</button> 
   <button class="btn" onclick="filterSelection('tools')">עזרים</button>
-  <button class="btn" onclick="filterSelection('games')">משחקים</button>
+  <button class="btn" id="idGames" onclick="filterSelection('games')">משחקים</button>
   <button class="btn" onclick="filterSelection('books')">ספרי קודש</button>
   <button class="btn" onclick="filterSelection('gapps')">אפליקציות גוגל</button>
   <button class="btn" onclick="filterSelection('transport')">תחבורה</button>
@@ -607,7 +613,7 @@ class="button"><i class="fa fa-download"></i></a></div></div>
 <!-- ## GAMES ## -->
 
 <!-- Gold Miner -->
-<div class="column games">
+<div class="column games" >
     <div class="content"> <h3>מכרה הזהב</h3>
 <img src="assets/logos/goldminer_logo.png" width="160" height="160">
 <p>משחק מאתגר בו תצטרכו לאסוף את הזהב הנדרש, ולעמוד ביעדים תוך זמן קצר.</p>
@@ -686,6 +692,27 @@ function filterSelection(c) {
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    
+    
+    var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    }}
+    
+    if( !isMobile.Android() )
+   {
+    
+     var y = document.getElementById('idGames');
+    y.style.display = 'none';
+    
+    var z = document.getElementsByClassName("column games");
+var g;
+for (g = 0; g < z.length; g++) {
+    z[g].style.display = 'none';
+}
+   
+   }
+   
   }
 }
 
