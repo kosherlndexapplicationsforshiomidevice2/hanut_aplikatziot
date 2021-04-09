@@ -8,18 +8,6 @@
   box-sizing: border-box;
 }
 
-#myInput {
-  background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-  border-radius: 10px;
-}
-
 .button {
   background-color: #71C174;
   color: white;
@@ -66,7 +54,7 @@ body {
 
 /* Create three equal columns that floats next to each other */
 .column {
-  padding: 8px;
+  
   display: none; /* Hide all elements by default */
 }
 
@@ -119,10 +107,11 @@ display: none;
 </style>
 </head>
 <body dir="rtl" align="center">
-<div class="main">
-<h2>חנות אפליקציות</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="חיפוש.." title="כתוב את שם האפליקציה">
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h2>חנות אפליקציות</h2>
 
 <div id="myBtnContainer">
   <button class="btn"  onclick="filterSelection('media')">מדיה</button> 
@@ -135,10 +124,10 @@ display: none;
 </div>
 
 <div class="row">
-<table id="myTable">
 				
 <!-- Google Play Services 
-<tr><td><div class="column gapps"> <div class="content"> <h3>שירותי גוגל פליי</h3>
+<div class="column gapps">
+    <div class="content"> <h3>שירותי גוגל פליי</h3>
 <img src="assets/logos/services_logo.png" width="180" height="180">
 <p>יש לעדכן לעיתים את שירותי גוגל כדי לאפשר את הפעלת היישומים המבקשים אותם.</p>
 <a href="https://dl.dropboxusercontent.com/s/nwa4o2uw0aj17zf/GoogleServices.apk
@@ -146,359 +135,471 @@ display: none;
 -->
   
 <!-- CLEANER -->
-<tr><td><div class="column tools"> <div class="content"> <h3>ניקוי קבצים מיותרים</h3>
+<div class="column tools">
+    <div class="content"> <h3>ניקוי קבצים מיותרים</h3>
 <img src="assets/logos/cleaner_logo.png" width="128" height="128">
 <p>המכשיר מאחסן בתוכו את קבצי ההתקנות של האפליקציות, וכן קבצים מיותרים נוספים. מומלץ להשתמש במנקה הקבצים כדי לחסוך מקום באיחסון הפנימי.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21631&authkey=AL--wK7yzrfVpXU" class="button">לחץ להורדת המנקה</i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21631&authkey=AL--wK7yzrfVpXU
+" class="button">לחץ להורדת המנקה</i></a></div></div>
 
 <!-- Gmail web -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>Gmail בתצוגת אתר</h3>
+<div class="column gapps">
+    <div class="content"> <h3>Gmail בתצוגת אתר</h3>
 <img src="assets/logos/gmail_logo.png" width="150" height="150">
 <p>שימו לב! אפליקציה זו נועדה למי שאינו מצליח להתחבר לחשבון גוגל שלו דרך האפליקציה המובנית במכשיר. אפליקציה זאת מופעלת על ידי תצוגת אתר אינטרנט ולא תקבלו התראות למכשיר כשתקבלו מייל חדש. יש להיכנס מדי פעם לאפליקציה ולבדוק ידנית אם קיבלתם מייל חדש. יש להפעיל שליטת עכבר באפליקציה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21575&authkey=AInbg0JSUqDDzqk" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21575&authkey=AInbg0JSUqDDzqk
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- WAZE -->
-<tr><td><div class="column transport"> <div class="content"> <h3>Waze - נסיעה בדרכים</h3>
+<div class="column transport">
+    <div class="content"> <h3>Waze - נסיעה בדרכים</h3>
 <img src="assets/logos/waze_logo.png" width="180" height="180">
 <p>Waze היא אפליקציית הניווט ודיווחי התנועה הגדולה בעולם המתבססת על קהילת משתמשים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21632&authkey=ADforRd2EJeXQOc" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21632&authkey=ADforRd2EJeXQOc
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MOOVIT -->
-<tr><td><div class="column transport"> <div class="content"> <h3>Moovit - תחבורה ציבורית</h3>
+<div class="column transport">
+    <div class="content"> <h3>Moovit - תחבורה ציבורית</h3>
 <img src="assets/logos/moovit_logo.png" width="160" height="160">
 <p>מוביט מספקת לוחות זמנים עדכניים כפי שמפרסמות מפעילות התחבורה הציבורית, ובנוסף, גם את זמני ההגעה בזמן אמת של הקו, במקרים בהם על הקו מותקן מכשיר GPS.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21604&authkey=ADxBUrs-6N5ekXM" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21604&authkey=ADxBUrs-6N5ekXM
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- PANGO -->
-<tr><td><div class="column transport"> <div class="content"> <h3>Pango - פנגו</h3>
+<div class="column transport">
+    <div class="content"> <h3>Pango - פנגו</h3>
 <img src="assets/logos/pango_logo.png" width="160" height="160">
 <p>אפליקציית חניה מתקדמת שמונעת דוחות וחוסכת זמן וכסף. חניה מהנייד בכחול לבן, שירות טסט וטיפול עד הבית, יציאה מהירה מחניונים ועוד מגוון פתרונות לנהג ולרכב.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21606&authkey=AOpOT6lfoFAPk8w" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21606&authkey=AOpOT6lfoFAPk8w
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HOSPITALS -->
-<tr><td><div class="column tools"> <div class="content"> <h3>קופות החולים</h3>
+<div class="column tools">
+    <div class="content"> <h3>קופות החולים</h3>
 <img src="assets/logos/hospitals_logo.png" width="180" height="180">
 <p>כל קופות החולים מותאם לשיאומי מקשים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21696&authkey=AHxsts1m9aa3uFY" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21696&authkey=AHxsts1m9aa3uFY
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 
 <!-- BANKS -->
-<tr><td><div class="column tools"> <div class="content"> <h3>בנקים</h3>
+<div class="column tools">
+    <div class="content"> <h3>בנקים</h3>
 <img src="assets/logos/banks_logo.png" width="160" height="160">
 <p>כל אתרי הבנקים מותאם לשיאומי מקשים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21626&authkey=AMN4XhMqQ8jEFo8" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21626&authkey=AMN4XhMqQ8jEFo8
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MIZRAHI -->
-<tr><td><div class="column tools"> <div class="content"> <h3>מזרחי טפחות</h3>
+<div class="column tools">
+    <div class="content"> <h3>מזרחי טפחות</h3>
 <img src="assets/logos/mizrahi_logo.png" width="144" height="144">
 <p>בנק מזרחי טפחות מותאם לשיאומי מקשים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21603&authkey=ABzwQbFxhPFU-PM" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21603&authkey=ABzwQbFxhPFU-PM
+" class="button"><i class="fa fa-download"></i></a></div></div>
  
 <!-- PEPPER -->
-<tr><td><div class="column tools"> <div class="content"> <h3>Pepper</h3>
+<div class="column tools">
+    <div class="content"> <h3>Pepper</h3>
 <img src="assets/logos/pepper_logo.png" width="144" height="144">
 <p>בנק פפר מותאם לשיאומי מקשים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21607&authkey=AIjOBP3ou3RWDns" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21607&authkey=AIjOBP3ou3RWDns
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- myVisit -->
-<tr><td><div class="column tools"> <div class="content"> <h3>myVisit - זימון תורים</h3>
+<div class="column tools">
+    <div class="content"> <h3>myVisit - זימון תורים</h3>
 <img src="assets/logos/myvisit_logo.png" width="160" height="160">
 <p>אפליקציה לזימון תורים במשרדי הרישוי ובשירותים ציבוריים. יש להשתמש בגלילת העכבר בכפתור הניווט האמצעי + כפתורי הניווט לצדדים בו זמנית.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21643&authkey=AA_xMDM7jCcZr44" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21643&authkey=AA_xMDM7jCcZr44
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- B-Leumi -->
-<tr><td><div class="column tools"> <div class="content"> <h3>ביטוח לאומי - שירות אישי</h3>
+<div class="column tools">
+    <div class="content"> <h3>ביטוח לאומי - שירות אישי</h3>
 <img src="assets/logos/bleumi_logo.png" width="180" height="180">
 <p>אתר שירות אישי של ביטוח לאומי מותאם לשיאומי.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21697&authkey=AFBhLfGn9pZk6vI" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21697&authkey=AFBhLfGn9pZk6vI
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Jewish Music -->
-<tr><td><div class="column media"> <div class="content"> <h3>רדיו Jewish Music</h3>
+<div class="column media">
+    <div class="content"> <h3>רדיו Jewish Music</h3>
 <img src="assets/logos/jewishradio_logo.png" width="160" height="160">
 <p>רדיו עם שירים יהודיים מותאם במיוחד לשיאומי מקשים. ניתן להפעלה גם ברקע.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21591&authkey=APMfaLUqCTZOGu4" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21591&authkey=APMfaLUqCTZOGu4
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- RadioFM Israel -->
-<tr><td><div class="column media"> <div class="content"> <h3>רדיו FM ישראל</h3>
+<div class="column media">
+    <div class="content"> <h3>רדיו FM ישראל</h3>
 <img src="assets/logos/radiofm_logo.png" width="144" height="144">
 <p>רדיו FM ישראל עם כל תחנות הרדיו בישראל.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21608&authkey=AMT9KKjmMGQoxHk" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21608&authkey=AMT9KKjmMGQoxHk
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Jradio -->
-<tr><td><div class="column media"> <div class="content"> <h3>תחנות רדיו יהודי</h3>
+<div class="column media">
+    <div class="content"> <h3>תחנות רדיו יהודי</h3>
 <img src="assets/logos/jradio_logo.png" width="160" height="160">
 <p>תחנות רדיו נוספות עם שירים יהודיים מותאם במיוחד לשיאומי מקשים. ניתן להפעלה גם ברקע.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21592&authkey=AJK-KGgRnypGsec" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21592&authkey=AJK-KGgRnypGsec
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- VLC Player -->
-<tr><td><div class="column media"> <div class="content"> <h3>נגן מדיה VLC</h3>
+<div class="column media">
+    <div class="content"> <h3>נגן מדיה VLC</h3>
 <img src="assets/logos/vlc_logo.png" width="160" height="160">
 <p>נגן המדיה הכי טוב למכשיר להאזנת שמע וצפייה בוידאו. יש אפשרות מובנית של סיבוב מסך.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21624&authkey=ALjaigQvItG8AKg" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21624&authkey=ALjaigQvItG8AKg
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- ME -->
-<tr><td><div class="column tools"> <div class="content"> <h3>זיהוי שיחות - Me</h3>
+<div class="column tools">
+    <div class="content"> <h3>זיהוי שיחות - Me</h3>
 <img src="assets/logos/me_logo.png" width="160" height="160">
 <p>מי היא אפליקציית זיהוי השיחות והגנה מפני ספאם הטובה ביותר עבור האנדרואיד.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21600&authkey=ACjk4zpz0SPYuQU" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21600&authkey=ACjk4zpz0SPYuQU
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- דואר ישראל -->
-<tr><td><div class="column tools"> <div class="content"> <h3>דואר ישראל</h3>
+<div class="column tools">
+    <div class="content"> <h3>דואר ישראל</h3>
 <img src="assets/logos/israelpost_logo.png" width="180" height="180">
 <p>מעקב משלוחים, איתור מיקוד, ושירותים נוספים באפליקציה של דואר ישראל.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21590&authkey=AI7hRcfthqDyGjA" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21590&authkey=AI7hRcfthqDyGjA
+" class="button"><i class="fa fa-download"></i></a></div></div>
  
 <!-- GOOGLE MAPS  -->
-<tr><td><div class="column gapps transport"> <div class="content"> <h3>Google Maps - מפות</h3>
+<div class="column gapps transport">
+    <div class="content"> <h3>Google Maps - מפות</h3>
 <img src="assets/logos/maps_logo.png" width="180" height="180">
 <p>מפות גוגל לשיאומי מקשים. יש להפעיל שליטת עכבר באפליקציה. הטעינה הראשונה לוקחת קצת זמן.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21580&authkey=AKNasTkpIfBoRi0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21580&authkey=AKNasTkpIfBoRi0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE TRANSLATE  -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>Google Translate - תרגום שפות</h3>
+<div class="column gapps">
+    <div class="content"> <h3>Google Translate - תרגום שפות</h3>
 <img src="assets/logos/translate_logo.png" width="180" height="180">
 <p>תרגום טקסט בין 103 שפות באמצעות הקלדה, הקלטה, ודרכים נוספות. אפשר להוריד את המילונים ולהשתמש בתרגום אף ללא חיבור אינטרנט.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21583&authkey=ANP7sFmFHnL7bpA" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21583&authkey=ANP7sFmFHnL7bpA
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- PDF Reader -->
-<tr><td><div class="column tools"> <div class="content"> <h3>קורא PDF</h3>
+<div class="column tools">
+    <div class="content"> <h3>קורא PDF</h3>
 <img src="assets/logos/pdf_logo.png" width="160" height="160">
 <p>קורא קבצי PDF. יש להפעיל שליטת עכבר באפליקציה. ניתן לעשום זום בתוך המסמך על ידי לחיצה על מקש הניווט האמצעי + מקש לאחד הצדדים, ואז יופיעו כפתורי הזום.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21605&authkey=AMDkibzAqTSpRb4" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21605&authkey=AMDkibzAqTSpRb4
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE KEEP  -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>Google Keep - הערות גוגל</h3>
+<div class="column gapps">
+    <div class="content"> <h3>Google Keep - הערות גוגל</h3>
 <img src="assets/logos/keep_logo.png" width="192" height="192">
 <p>הוספת הערות, רשימות ותמונות ל- Google Keep. אפשר גם להקליט תזכיר קולי ולמצוא אותו אחר כך בקלות בחיפוש הערות.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21595&authkey=AEV879713xYFg_U" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21595&authkey=AEV879713xYFg_U
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE CALENDAR -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>Google Calendar - יומן גוגל</h3>
+<div class="column gapps">
+    <div class="content"> <h3>Google Calendar - יומן גוגל</h3>
 <img src="assets/logos/calendar_logo.png" width="192" height="192">
 <p>דרכים שונות לצפייה ביומן שלך - עבור במהירות בין תצוגת חודש, שבוע ויום. אירועים מ- Gmail מתווספים אוטומטית ללוח השנה שלך.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21581&authkey=AOT7spXPa6mUJ9o" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21581&authkey=AOT7spXPa6mUJ9o
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE PHOTOS -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>Google Photos - תמונות גוגל</h3>
+<div class="column gapps">
+    <div class="content"> <h3>Google Photos - תמונות גוגל</h3>
 <img src="assets/logos/photos_logo.png" width="180" height="180">
 <p>תמונות השמורות באיחסון של חשבון גוגל</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21582&authkey=AJIjA9LBHBe0HvA" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21582&authkey=AJIjA9LBHBe0HvA
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HANGOUTS -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>Hangouts - הנגאאוט</h3>
+<div class="column gapps">
+    <div class="content"> <h3>Hangouts - הנגאאוט</h3>
 <img src="assets/logos/hangouts_logo.png" width="180" height="180">
 <p>Hangouts הוא שירות מסרים מיידיים, שיחות קוליות ווידאו-צ'אט, המוצע חינם למשתמשי גוגל.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21588&authkey=ABCFIQZsj0HkWUQ" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21588&authkey=ABCFIQZsj0HkWUQ
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MESSAGES -->
-<tr><td><div class="column gapps"> <div class="content"> <h3>הודעות</h3>
+<div class="column gapps">
+    <div class="content"> <h3>הודעות</h3>
 <img src="assets/logos/messages_logo.png" width="180" height="180">
 <p>אפליקציית ההודעות של גוגל</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21635&authkey=ACjqpdaQt0IrxR0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21635&authkey=ACjqpdaQt0IrxR0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- WORD -->
-<tr><td><div class="column tools"> <div class="content"> <h3>Word - וורד</h3>
+<div class="column tools">
+    <div class="content"> <h3>Word - וורד</h3>
 <img src="assets/logos/word_logo.png" width="160" height="160">
 <p>Word לשיאומי מקשים. מומלץ להשתמש במקלדת עם הזיהוי הקולי בעת כתיבת מסמכים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21734&authkey=ALujiZq2cRIhT_U" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21734&authkey=ALujiZq2cRIhT_U
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- POWERPOINT -->
-<tr><td><div class="column tools"> <div class="content"> <h3>PowerPoint</h3>
+<div class="column tools">
+    <div class="content"> <h3>PowerPoint</h3>
 <img src="assets/logos/powerpoint_logo.png" width="160" height="160">
 <p>PowerPoint לשיאומי מקשים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21742&authkey=AAi4BhnUcACN9nk" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21742&authkey=AAi4BhnUcACN9nk
+" class="button"><i class="fa fa-download"></i></a></div></div>
 	
 <!-- GOLAN TELECOM -->
-<tr><td><div class="column tools"> <div class="content"> <h3>גולן טלקום</h3>
+<div class="column tools">
+    <div class="content"> <h3>גולן טלקום</h3>
 <img src="assets/logos/golan_logo.png" width="180" height="180">
 <p>גולן טלקום לשיאומי מקשים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21576&authkey=AGvcwJ4uv8ayZrY" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21576&authkey=AGvcwJ4uv8ayZrY
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SIM Change -->
-<tr><td><div class="column tools"> <div class="content"> <h3>התראה על שינוי סים</h3>
+<div class="column tools">
+    <div class="content"> <h3>התראה על שינוי סים</h3>
 <img src="assets/logos/simchange_logo.png" width="180" height="180">
 <p>התראה על שינוי סים מפני גניבה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21741&authkey=AMpeesb9OIHDYn8" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21741&authkey=AMpeesb9OIHDYn8
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Foldplay -->
-<tr><td><div class="column media"> <div class="content"> <h3>Foldplay - נגן תיקייה</h3>
+<div class="column media">
+    <div class="content"> <h3>Foldplay - נגן תיקייה</h3>
 <img src="assets/logos/foldplay_logo.png" width="180" height="180">
 <p>נגן שירים לפי תיקיית קבצים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21573&authkey=ABqbp5dUIS-poHQ" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21573&authkey=ABqbp5dUIS-poHQ
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Wallpapers -->
-<tr><td><div class="column tools"> <div class="content"> <h3>רקעים לשיאומי</h3>
+<div class="column tools">
+    <div class="content"> <h3>רקעים לשיאומי</h3>
 <img src="assets/logos/wallpapers_logo.png" width="180" height="180">
 <p>רקעים יפים לשיאומי מקשים. הוספתי גם תמונות של צדיקים. ניתן להשתמש באפליקציה באמצעות המקשים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21625&authkey=AMW1Do5-KeO_yfU" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21625&authkey=AMW1Do5-KeO_yfU
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- File Manager -->
-<tr><td><div class="column tools"> <div class="content"> <h3>מנהל קבצים+</h3>
+<div class="column tools">
+    <div class="content"> <h3>מנהל קבצים+</h3>
 <img src="assets/logos/filemanager_logo.png" width="180" height="180">
 <p>מנהל קבצים מתקדם לשיאומי מקשים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21572&authkey=AG87Qdt6PRzMOvA" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21572&authkey=AG87Qdt6PRzMOvA
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- ColorNote -->
-<tr><td><div class="column tools"> <div class="content"> <h3>פתקים - ColorNote</h3>
+<div class="column tools">
+    <div class="content"> <h3>פתקים - ColorNote</h3>
 <img src="assets/logos/colornote_logo.png" width="180" height="180">
 <p>אפליקציה נוחה מאוד לכתיבת פתקים, רשימות והערות.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21571&authkey=ALDAUcLTBhN9pfQ" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21571&authkey=ALDAUcLTBhN9pfQ
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SoundAbout -->
-<tr><td><div class="column tools"> <div class="content"> <h3>תיקון בעיה באוזניות</h3>
+<div class="column tools">
+    <div class="content"> <h3>תיקון בעיה באוזניות</h3>
 <img src="assets/logos/soundabout_logo.png" width="92" height="92">
 <p>נא להוריד רק אם קרה לכם את הבעיה של האוזניה!
 אפליקציה שמתקנת את בעיית האוזנייה הידועה.
 לבחור בלשונית הראשונה "ON - No Status"
 ובלשונית השלישית "Earpiece".</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21614&authkey=APsMj3dpyWgQ80g" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21614&authkey=APsMj3dpyWgQ80g
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Volume Control -->
-<tr><td><div class="column tools"> <div class="content"> <h3>שליטה בווליום עם העכבר</h3>
+<div class="column tools">
+    <div class="content"> <h3>שליטה בווליום עם העכבר</h3>
 <img src="assets/logos/volume_logo.png" width="160" height="160">
 <p>היכנס לאפליקציה ויופיע לך על המסך כפתורים לשליטה בעוצמת הווליום באמצעות העכבר.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21622&authkey=AAxAMFzXy3BX448" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21622&authkey=AAxAMFzXy3BX448
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Rotate Control -->
-<tr><td><div class="column tools"> <div class="content"> <h3>סיבוב מסך</h3>
+<div class="column tools">
+    <div class="content"> <h3>סיבוב מסך</h3>
 <img src="assets/logos/rotate_logo.png" width="160" height="160">
 <p>אפליקציה לשליטה על סיבוב מסך התצוגה באפליקציות.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21610&authkey=AGFxAoWy-AjymA0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21610&authkey=AGFxAoWy-AjymA0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Vibrate Control -->
-<tr><td><div class="column tools"> <div class="content"> <h3>שליטה ברטט</h3>
+<div class="column tools">
+    <div class="content"> <h3>שליטה ברטט</h3>
 <img src="assets/logos/vibrate_logo.png" width="160" height="160">
 <p>אפליקציה לשליטה על הרטט בשימוש האפליקציות. אפשר למשל להאריך את משך הרטט בתזכורת של הלוח שנה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21620&authkey=AMWS5Nw3fwxZdA4" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21620&authkey=AMWS5Nw3fwxZdA4
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Bluetooth Contacts -->
-<tr><td><div class="column tools"> <div class="content"> <h3>העברת אנשי קשר בבלוטוס</h3>
+<div class="column tools">
+    <div class="content"> <h3>העברת אנשי קשר בבלוטוס</h3>
 <img src="assets/logos/bluetooth_logo.png" width="180" height="180">
 <p>אפליקציה להעברת אנשי קשר באמצעות הבלוטוס. ניתן להעביר אנשי קשר גם ממכשירי הנוקיה הפשוטים. נא להפעיל שליטת עכבר כדי שתוכלו לבחור באחד המכשירים הגלויים ברשימה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21630&authkey=AKyAcT2imnnuJQI" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21630&authkey=AKyAcT2imnnuJQI
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MTcam -->
-<tr><td><div class="column tools"> <div class="content"> <h3>מצלמת MTcam Pro</h3>
+<div class="column tools">
+    <div class="content"> <h3>מצלמת MTcam Pro</h3>
 <img src="assets/logos/mtcam_logo.png" width="180" height="180">
 <p>חיבור מצלמת MTcam לשיאומי מקשים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21640&authkey=AISFCoKi58J3eHE" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21640&authkey=AISFCoKi58J3eHE
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Guitar Tuner -->
-<tr><td><div class="column tools"> <div class="content"> <h3>מכוון גיטרה</h3>
+<div class="column tools">
+    <div class="content"> <h3>מכוון גיטרה</h3>
 <img src="assets/logos/gtuner_logo.png" width="144" height="144">
 <p>כיוון גיטרה בדרך פשוטה ונוחה באמצעות המכשיר. יש להפעיל שליטת עכבר באפליקציה כדי ללחוץ על התפריט.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21584&authkey=AI38obCwCNJPvv4" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21584&authkey=AI38obCwCNJPvv4
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- RingtoneMaker -->
-<tr><td><div class="column tools"> <div class="content"> <h3>יוצר רינגטונים</h3>
+<div class="column tools">
+    <div class="content"> <h3>יוצר רינגטונים</h3>
 <img src="assets/logos/ringtone_logo.png" width="180" height="180">
 <p>יצירה וחתיכת רינגטונים לשיאומי. האפליקציה תומכת במקשים במלואה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21641&authkey=AIEPhm7PGpZgHXw" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21641&authkey=AIEPhm7PGpZgHXw
+" class="button"><i class="fa fa-download"></i></a></div></div>
  
 <!-- Weather -->
-<tr><td><div class="column tools"> <div class="content"> <h3>מזג האוויר</h3>
+<div class="column tools">
+    <div class="content"> <h3>מזג האוויר</h3>
 <img src="assets/logos/weather_logo.png" width="180" height="180">
 <p>מזג האוויר בכל הערים בארץ.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21638&authkey=ANTTG3cAC0meHZ0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21638&authkey=ANTTG3cAC0meHZ0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 	
 	<!-- Yedidim -->
-<tr><td><div class="column tools"> <div class="content"> <h3>ידידים מתנדבים</h3>
+<div class="column tools">
+    <div class="content"> <h3>ידידים מתנדבים</h3>
 <img src="assets/logos/yedidim_logo.png" width="160" height="160">
 <p>ידידים כוננות. הערה: יש הודעת שגיאה בהתחלה יש להתעלם ממנה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21739&authkey=AOHXKoaS1_l0NeQ" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21739&authkey=AOHXKoaS1_l0NeQ
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Kikar Hashabat -->
-<tr><td><div class="column tools"> <div class="content"> <h3>כיכר השבת</h3>
+<div class="column tools">
+    <div class="content"> <h3>כיכר השבת</h3>
 <img src="assets/logos/kikar_logo.png" width="180" height="180">
 <p>אתר החדשות והתוכן לציבור הדתי</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21594&authkey=AB1E2CSI-8HEcPo" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21594&authkey=AB1E2CSI-8HEcPo
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- BHADRE HADARIM -->
-<tr><td><div class="column tools"> <div class="content"> <h3>בחדרי חרדים</h3>
+<div class="column tools">
+    <div class="content"> <h3>בחדרי חרדים</h3>
 <img src="assets/logos/bh_logo.png" width="180" height="180">
 <p>אתר חדשות לציבור הדתי</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21628&authkey=AEsCpc7z6VTnMlE" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21628&authkey=AEsCpc7z6VTnMlE
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HebDate -->
-<tr><td><div class="column tools"> <div class="content"> <h3>לוח שנה עברי</h3>
+<div class="column tools">
+    <div class="content"> <h3>לוח שנה עברי</h3>
 <img src="assets/logos/hebdate_logo.png" width="156" height="156">
 <p>לוח שנה עברי<br>יש להפעיל שליטת עכבר באפליקציה</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21585&authkey=AAbUamLI4jb7o0Y" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21585&authkey=AAbUamLI4jb7o0Y
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HebrewBar -->
-<tr><td><div class="column tools"> <div class="content"> <h3>עברי על הבר</h3>
+<div class="column tools">
+    <div class="content"> <h3>עברי על הבר</h3>
 <img src="assets/logos/hebrewbar_logo.png" width="144" height="144">
 <p>הצגת התאריך העברי בשורת ההתראות. ניתן גם להציג את זמני היום לפי איזור המגורים.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21586&authkey=AGHeu9ldTU9V0z0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21586&authkey=AGHeu9ldTU9V0z0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SEFARIA -->
-<tr><td><div class="column books"> <div class="content"> <h3>ספריא - מאגר ספרי קודש</h3>
+<div class="column books">
+    <div class="content"> <h3>ספריא - מאגר ספרי קודש</h3>
 <img src="assets/logos/sefaria_logo.png" width="240" height="150">
 <p>ספריא מביאה 3,000 שנים של טקסטים יהודיים בעברית ובתרגום לאנגלית (תנ”ך, משנה, תלמוד ועוד) לסמארטפון. ניתן לחפש מילות מפתח או לדפדף בתוכן העניינים בכדי לראות מקורות, תרגומים ופרשנויות. נפח הספריה כולה (כ500 מגה) מתאים לאחסון בטלפון עצמו כך שניתן להשתמש באפליקציה ללא חיבור לאינטרנט.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21613&authkey=ABmNo1m54IghRZI" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21613&authkey=ABmNo1m54IghRZI" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- YESOD  -->
-<tr><td><div class="column books"> <div class="content"> <h3>ובלכתך בדרך</h3>
+<div class="column books">
+    <div class="content"> <h3>ובלכתך בדרך</h3>
 <img src="assets/logos/bb_logo.png" width="160" height="160">
 <p>מאגר נוסף של ספרי קודש ללא צורך באינטרנט</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21615&authkey=ABeTN5C6SzlNll4"
-class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SMARTDAT  -->
-<tr><td><div class="column books"> <div class="content"> <h3>סמארט דת</h3>
+<div class="column books">
+    <div class="content"> <h3>סמארט דת</h3>
 <img src="assets/logos/smartdat_logo.png" width="144" height="144">
 <p>סידור, תהילים, שניים מקרא, זמני היום, לוח ברכות, ומילון ארמי-עברי! האפליקציה הותאמה למקשים.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21636&authkey=AKThYHRmz2Bv2OA"
-class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+class="button"><i class="fa fa-download"></i></a></div></div>
 	
 <!-- Arutz Meir -->
-<tr><td><div class="column media"> <div class="content"> <h3>ערוץ מאיר</h3>
+<div class="column media">
+    <div class="content"> <h3>ערוץ מאיר</h3>
 <img src="assets/logos/meir_logo.png" width="160" height="160">
 <p>שיעורי תורה להאזנה בכל הנושאים והעניינים. תורת ארץ ישראל.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21601&authkey=AAZCVWs4tj-ANJY" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21601&authkey=AAZCVWs4tj-ANJY
+" class="button"><i class="fa fa-download"></i></a></div></div>
   
 <!-- Arutz 2000 -->
-<tr><td><div class="column media"> <div class="content"> <h3>ערוץ 2000</h3>
+<div class="column media">
+    <div class="content"> <h3>ערוץ 2000</h3>
 <img src="assets/logos/2000_logo.png" width="160" height="160">
 <p>שיעורי תורה נוספים להאזנה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21629&authkey=AL4e8Bwo4qDx5UI" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21629&authkey=AL4e8Bwo4qDx5UI
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Kol Halashon -->
-<tr><td><div class="column media"> <div class="content"> <h3>קול הלשון</h3>
+<div class="column media">
+    <div class="content"> <h3>קול הלשון</h3>
 <img src="assets/logos/kolhalashon_logo.png" width="160" height="160">
 <p>אפליקציית קול הלשון להזאנת שיעורי תורה מרבנים רבים. האפליקציה הותאמה במיוחד למקשים ועיצוב חדש.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21736&authkey=AEgZu3dtZIB7LX8" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21736&authkey=AEgZu3dtZIB7LX8
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- KEHATI -->
-<tr><td><div class="column books"> <div class="content"> <h3>משניות מבוארות - קהתי</h3>
+<div class="column books">
+    <div class="content"> <h3>משניות מבוארות - קהתי</h3>
 <img src="assets/logos/kehati_logo.png" width="240" height="150">
 <p>משניות "קהתי" (גם באנגלית) עם פירוש ה"ברטנורא" ו"משנה סדורה" על כל ששה סדרי משנה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21598&authkey=AP4ZSQXD45Wo3yg" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21598&authkey=AP4ZSQXD45Wo3yg
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Hitas -->
-<tr><td><div class="column books"> <div class="content"> <h3>חת"ת</h3>
+<div class="column books">
+    <div class="content"> <h3>חת"ת</h3>
 <img src="assets/logos/hitas_logo.png" width="160" height="160">
 <p>חומש תהילים תניא. האפליקציה מגיעה ברוסית-עברית, ניתן להיכנס ללימוד היומי ולשנות בהגדרות לעברית בלבד.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21740&authkey=AMi7V2-n3ogYJc4" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21740&authkey=AMi7V2-n3ogYJc4
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- DVAR MALCHUT -->
-<tr><td><div class="column books"> <div class="content"> <h3>דבר מלכות</h3>
+<div class="column books">
+    <div class="content"> <h3>דבר מלכות</h3>
 <img src="assets/logos/malchut_logo.png" width="240" height="150">
 <p>חוברת 'דבר מלכות' בממשק נוח וידידותי.
 החוברת מתעדכנת באופן אוטומטי מידי שבוע.
 ניתן ללמוד ולעיין בכל הדבר מלכות ובשיעורים היומיים: חת"ת, חומש, תניא, היום יום, רמב"ם, ספר המצוות.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21597&authkey=AJoPdMexA8txiXg" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21597&authkey=AJoPdMexA8txiXg
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- TORAH & MEFARSHIM -->
-<tr><td><div class="column books"> <div class="content"> <h3>תורה עם מפרשים</h3>
+<div class="column books">
+    <div class="content"> <h3>תורה עם מפרשים</h3>
 <img src="assets/logos/mefarshim_logo.png" width="240" height="150">
 <p>תלמדו חומש עם תרגום לאנגלית וצרפתית ומלא מפרשים:
 -אונקלוס -יונתן -רש"י -שפתי חכמים -אבן עזרא  -הרמב"ן -ספורנו -בעל הטורים -אור החיים  -כלי יקר -דעת זקנים
 שניים מקרא ואחד תרגום בקלות!</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21599&authkey=AEsYglb1o15SkCc" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21599&authkey=AEsYglb1o15SkCc
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- BENISH HAY -->
-<tr><td><div class="column books"> <div class="content"> <h3>בן איש חי - הלכות</h3>
+<div class="column books">
+    <div class="content"> <h3>בן איש חי - הלכות</h3>
 <img src="assets/logos/benish_logo.png" width="240" height="150">
 <p>בן איש חי הוא ספר דרשות לפי פרשיות השבוע, ובו ביאור על פרשת השבוע והלכות שחובר על ידי הרב יוסף חיים מבגדאד ועל שמו הוא מכונה "הבן איש חי".
 הספר התקבל כספר הלכה קובע בחלק מקהילות המזרח התיכון ובעיקר על יהדות בבל. 
@@ -506,126 +607,171 @@ class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
 בתחילת הפרשה מובאים ענייני אגדה, ואחריהם ההלכות.
 הספר כתוב בצורה ברורה, נעימה וקצרה. 
 לעיתים רבות פוסק הרב כדברי הזוהר הקדוש והאר"י.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21627&authkey=APwjPb5VcOpcgbM" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21627&authkey=APwjPb5VcOpcgbM
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- DAF HAYOMI -->
-<tr><td><div class="column books"> <div class="content"> <h3>הדף היומי</h3>
+<div class="column books">
+    <div class="content"> <h3>הדף היומי</h3>
 <img src="assets/logos/dafyomi_logo.png" width="144" height="144">
 <p>פורטל הדף היומי הוא מרכז התכנים הגדול ביותר על הגמרא, דיונים וכלי עזר ללומדי הדף היומי לפי סדר דפי התלמוד הבבלי.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21570&authkey=AOkBI_AX2fcGK0c" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21570&authkey=AOkBI_AX2fcGK0c
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HALACHA TEMAN -->
-<tr><td><div class="column books"> <div class="content"> <h3>הלכה יומית לק"ק תימן</h3>
+<div class="column books">
+    <div class="content"> <h3>הלכה יומית לק"ק תימן</h3>
 <img src="assets/logos/halacha_teman_logo.png" width="180" height="180">
 <p>הלכה יומית לבני קהילות תימן.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21637&authkey=AOx2XwQLLdJmo2Y" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21637&authkey=AOx2XwQLLdJmo2Y
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- TAMNIDOR -->
-<tr><td><div class="column books"> <div class="content"> <h3>תמנידור - סידור תמני</h3>
+<div class="column books">
+    <div class="content"> <h3>תמנידור - סידור תמני</h3>
 <img src="assets/logos/tamnidor_logo.png" width="180" height="180">
 <p>תימנידור הוא סידור תימני בנוסח בלדי שמראה את התפילה המתאימה לפי אותו היום למשל: בראש חודש, חנוכה סוכות וכו'</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21642&authkey=ABOazLoARJG3yZI" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21642&authkey=ABOazLoARJG3yZI
+" class="button"><i class="fa fa-download"></i></a></div></div>
 	
 <!-- SidurHabad -->
-<tr><td><div class="column books"> <div class="content"> <h3>סידור חב"ד</h3>
+<div class="column books">
+    <div class="content"> <h3>סידור חב"ד</h3>
 <img src="assets/logos/sidurhabad_logo.png" width="180" height="180">
 <p>סידור בנוסח חב"ד<br>האפליקציה תומכת מקשים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21698&authkey=AAe-5mcM9-ZtsjA" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21698&authkey=AAe-5mcM9-ZtsjA
+" class="button"><i class="fa fa-download"></i></a></div></div>
 		
 	
 <!-- TORAT YASHIYAHU -->
-<tr><td><div class="column books"> <div class="content"> <h3>תורת יאשיהו</h3>
+<div class="column books">
+    <div class="content"> <h3>תורת יאשיהו</h3>
 <img src="assets/logos/yash_logo.png" width="180" height="180">
 <p>אפליקצית מכון "תורת יאשיהו" עוסק בהפצת ספריו הקדושים של כבוד האדמו"ר רבי יאשיהו יוסף פינטו שליט"א</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21623&authkey=APODBqgCtnwtsv0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21623&authkey=APODBqgCtnwtsv0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- HIDABROOT -->
-<tr><td><div class="column media"> <div class="content"> <h3>הידברות</h3>
+<div class="column media">
+    <div class="content"> <h3>הידברות</h3>
 <img src="assets/logos/hidabroot_logo.png" width="170" height="170">
 <p>הידברות - מכון היהדות הגדול בעולם</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21593&authkey=AFH3gIV1DMi_kJk" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21593&authkey=AFH3gIV1DMi_kJk
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- PNINEY HALACHA -->
-<tr><td><div class="column books"> <div class="content"> <h3>פניני הלכה</h3>
+<div class="column books">
+    <div class="content"> <h3>פניני הלכה</h3>
 <img src="assets/logos/pnineyhalacha_logo.png" width="240" height="150">
 <p>האפליקציה הרשמית לסדרת ספרי ההלכה "פניני הלכה" של הרב אליעזר מלמד שליט"א.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21609&authkey=AB1AYQWVmS2u8co" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21609&authkey=AB1AYQWVmS2u8co
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SHULHAN ARUCH -->
-<tr><td><div class="column books"> <div class="content"> <h3>שולחן ערוך אורח חיים</h3>
+<div class="column books">
+    <div class="content"> <h3>שולחן ערוך אורח חיים</h3>
 <img src="assets/logos/shulhan_logo.png" width="240" height="150">
 <p>שולחן ערוך אורח חיים עם משנה ברורה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21611&authkey=AJwh6YbWG8Xk4LA" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21611&authkey=AJwh6YbWG8Xk4LA
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- TANYA -->
-<tr><td><div class="column books"> <div class="content"> <h3>תניא</h3>
+<div class="column books">
+    <div class="content"> <h3>תניא</h3>
 <img src="assets/logos/tanya_logo.png" width="240" height="150">
 <p>ספר ליקוטי אמרים "תניא"
 מאת רבי שניאור זלמן מליאדי - האדמו"ר הזקן.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21621&authkey=AIjFkWDyWe8BhKU" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21621&authkey=AIjFkWDyWe8BhKU
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Tehilim -->
-<tr><td><div class="column books"> <div class="content"> <h3>תהילים עם תפילות נוספות</h3>
+<div class="column books">
+    <div class="content"> <h3>תהילים עם תפילות נוספות</h3>
 <img src="assets/logos/tehilim_logo.png" width="160" height="160">
 <p>ספר תהילים מחולק לפי ימים, פרקים, או ספרים, עם סימניה, ותפילות נוספות. יש גם תיקון הכללי.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21618&authkey=AH_C3nWK8K8cYz4" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21618&authkey=AH_C3nWK8K8cYz4
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- SIPUREY MAASIOT -->
-<tr><td><div class="column books"> <div class="content"> <h3>סיפורי מעשיות</h3>
+<div class="column books">
+    <div class="content"> <h3>סיפורי מעשיות</h3>
 <img src="assets/logos/sipur_logo.png" width="256" height="160">
 <p>סיפורי מעשיות מאת ר' נחמן מברסלב כולל תיקון הכללי.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21612&authkey=AFhJAeNqTvR2V_Y" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21612&authkey=AFhJAeNqTvR2V_Y
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- ## GAMES ## -->
+
 <!-- Gold Miner -->
-<tr><td><div class="column games" >
+<div class="column games" >
     <div class="content"> <h3>מכרה הזהב</h3>
 <img src="assets/logos/goldminer_logo.png" width="160" height="160">
 <p>משחק מאתגר בו תצטרכו לאסוף את הזהב הנדרש, ולעמוד ביעדים תוך זמן קצר.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21579&authkey=AA9nWGVkPx9js8g" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21579&authkey=AA9nWGVkPx9js8g
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Fish Spikes -->
-<tr><td><div class="column games"> <div class="content"> <h3>דגים וקוצים</h3>
+<div class="column games">
+    <div class="content"> <h3>דגים וקוצים</h3>
 <img src="assets/logos/fishspikes_logo.png" width="160" height="160">
 <p>עזרו לדג להתחמק מהקוצים ולשרוד כמה שיותר זמן.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21574&authkey=AFcu4zuj4_zCkzM" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21574&authkey=AFcu4zuj4_zCkzM" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Knife Hit -->
-<tr><td><div class="column games"> <div class="content"> <h3>חרב קליעה</h3>
+<div class="column games">
+    <div class="content"> <h3>חרב קליעה</h3>
 <img src="assets/logos/hitknife_logo.png" width="160" height="160">
 <p>לקלוע חרבות לתוך העיגול במרכז מבלי לפגוע בחרבות אחרות. יש להפעיל שליטת עכבר באפליקציה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21602&authkey=AJHhrSj2z94E8do" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21602&authkey=AJHhrSj2z94E8do
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Sudoku -->
-<tr><td><div class="column games"> <div class="content"> <h3>סודוקו</h3>
+<div class="column games">
+    <div class="content"> <h3>סודוקו</h3>
 <img src="assets/logos/sudoku_logo.png" width="160" height="160">
 <p>משחק סודוקו תומך מקשים</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21616&authkey=AGkis8uieaBANA0" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21616&authkey=AGkis8uieaBANA0
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Solitaire -->
-<tr><td><div class="column games"> <div class="content"> <h3>סוליטייר</h3>
+<div class="column games">
+    <div class="content"> <h3>סוליטייר</h3>
 <img src="assets/logos/solitaire_logo.png" width="160" height="160">
 <p>משחק קלפים סוליטייר</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21617&authkey=AOdO9mRRqzLPBRQ" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21617&authkey=AOdO9mRRqzLPBRQ
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Spider -->
-<tr><td><div class="column games"> <div class="content"> <h3>ספיידר</h3>
+<div class="column games">
+    <div class="content"> <h3>ספיידר</h3>
 <img src="assets/logos/spider_logo.png" width="160" height="160">
 <p>משחק קלפים ספיידר</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21619&authkey=AGthGzhlexdRZCk" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21619&authkey=AGthGzhlexdRZCk
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Loop -->
-<tr><td><div class="column games"> <div class="content"> <h3>משחק הלולאות</h3>
+<div class="column games">
+    <div class="content"> <h3>משחק הלולאות</h3>
 <img src="assets/logos/loop_logo.png" width="144" height="144">
 <p>משחק פאזל מאתגר של לולאות אינסופיות</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21596&authkey=AO18WVWTAFDGQNg" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21596&authkey=AO18WVWTAFDGQNg
+" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Hexagon King -->
-<tr><td><div class="column games"> <div class="content"> <h3>מלך המשושים</h3>
+<div class="column games">
+    <div class="content"> <h3>מלך המשושים</h3>
 <img src="assets/logos/hexagon_logo.png" width="144" height="144">
 <p>משחק חשיבה מאתגר</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21589&authkey=ALDFy4vHH-_Phnk" class="button"><i class="fa fa-download"></i></a></div></div></td></tr>
-</table></div></div></div>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21589&authkey=ALDFy4vHH-_Phnk
+" class="button"><i class="fa fa-download"></i></a></div></div>
+
+
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
 
 <script>
 filterSelection("all")
@@ -694,26 +840,6 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
-<script>
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
 
 <br><br><div id="copyright"><br>
 <img src="assets/logos/ic_kosher.png" alt="החנות הכשרה" width="72" height="72">
