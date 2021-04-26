@@ -62,3 +62,12 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+function updateComment() {
+  var x = document.getElementById("upCm");
+  if (x.style.display == "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
