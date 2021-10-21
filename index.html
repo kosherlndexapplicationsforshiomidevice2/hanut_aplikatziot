@@ -21,6 +21,17 @@
   box-sizing: border-box;
 }
 
+	#myInput {
+  background-image: url('assets/logos/search_icon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 10px;				   
+}	  
 .button {
   background-color: #71C174;
   color: white;
@@ -63,8 +74,9 @@ body {
   padding: 8px;
 }
 
-.column  {
-display: none;
+.column {
+  padding: 8px;
+  display: none;
 }
 
 .row:after {
@@ -113,6 +125,7 @@ display: none;
 	
 <h2>חנות אפליקציות</h2>
 
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="חיפוש.." title="כתוב את שם האפליקציה">																													
 <div id="myBtnContainer">
   <button class="btn"  onclick="filterSelection('media')">מדיה</button> 
   <button class="btn" onclick="filterSelection('tools')">עזרים</button>
@@ -124,6 +137,7 @@ display: none;
 </div>
 
 <div class="row">
+<div id="list">									   
 				
 <!-- Google Play Services 
 <div class="column gapps"> <div class="content"> <h3>שירותי גוגל פליי</h3>
