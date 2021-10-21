@@ -53,6 +53,8 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
+
+// Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
@@ -61,6 +63,56 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}
+
+var input = document.getElementById("myInput");
+input.addEventListener("input", myFunction);
+
+function myFunction(e) {
+
+
+  var filter = e.target.value.toUpperCase();
+
+  var list = document.getElementById("list");
+  var divs = list.getElementsByTagName("div");
+  var g;
+  for (var i = 0; i < divs.length; i++) {
+    var a = divs[i].getElementsByTagName("h3")[0];
+	var b = divs[i].getElementsByTagName("p")[0];
+   
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        divs[i].style.display = "";
+		
+		
+      } else {
+	  if (b.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        divs[i].style.display = "";
+	
+      }
+	  else
+	  {
+        divs[i].style.display = "none";
+      }
+	  }
+	  
+    var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    }}
+    
+    if( !isMobile.Android() )
+   {
+    
+    var z = document.getElementsByClassName("column games");
+var g;
+for (g = 0; g < z.length; g++) {
+    z[g].style.display = 'none';
+}
+   
+   }
+	
+  }
+
 }
 
 function updateComment() {
