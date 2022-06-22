@@ -123,8 +123,626 @@ body {
 שלום וברכה לכולם. שימו לב! גירסא חדשה 1.5 זמינה כעת. לכל מי שיש גירסא 1.4 בלבד, ניתן להוריד את העדכון גירסא דרך ההגדרות של המכשיר. הגירסא החדשה כוללת הרשאת רוט, המאפשרת התקנה אוטומטית של האפליקציות בחנות, והורדת האפליקציות החדשות שהתווספו לחנות כגון נעילת יישומים, הסרטת מסך וכו'. העדכון גירסא כולל תיקונים ושידרוגים נוספים. מי שנתקל בבעיה בתהליך העדכון גירסא, מוזמן לפנות אליי במייל בשעות הצהריים.
 </div -->
 	
-<h2>החנות בתיקון</h2>
-<h3>אנא חזרו מאוחר יותר</h3>
+<h2>חנות אפליקציות</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="חיפוש.." title="כתוב את שם האפליקציה">																													
+<div id="myBtnContainer">
+  <button class="btn"  onclick="filterSelection('media')">מדיה</button> 
+  <button class="btn" onclick="filterSelection('tools')">עזרים</button>
+  <button class="btn" id="idGames" onclick="filterSelection('games')">משחקים</button>
+  <button class="btn" onclick="filterSelection('books')">ספרי קודש</button>
+  <button class="btn" onclick="filterSelection('gapps')">אפליקציות גוגל</button>
+  <button class="btn" onclick="filterSelection('transport')">תחבורה</button>
+  <button class="btn active" autofocus onclick="filterSelection('all')">הכל</button>
+</div>
+
+<div class="row">
+<div id="list">									   
+				
+<!-- Google Play Services 
+<div class="column gapps"> <div class="content"> <h3>שירותי גוגל פליי</h3>
+<img src="assets/logos/services_logo.png" width="180" height="180">
+<p>יש לעדכן לעיתים את שירותי גוגל כדי לאפשר את הפעלת היישומים המבקשים אותם.</p>
+<a href="https://dl.dropboxusercontent.com/s/nwa4o2uw0aj17zf/GoogleServices.apk
+" class="button">עדכון שירותי גוגל</i></a></div></div>
+-->
+  
+<!-- CLEANER -->
+<div class="column tools">  <div class="content"> <h3>ניקוי קבצים מיותרים</h3>
+<img src="assets/logos/cleaner_logo.png" width="128" height="128">
+<p>המכשיר מאחסן בתוכו את קבצי ההתקנות של האפליקציות, וכן קבצים מיותרים נוספים. מומלץ להשתמש במנקה הקבצים כדי לחסוך מקום באיחסון הפנימי.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Cleaner.apk" class="button">לחץ להורדת המנקה</i></a></div></div>
+
+<!-- Gmail web -->
+<div class="column gapps"><div class="content"> <h3>Gmail בתצוגת אתר</h3>
+<img src="assets/logos/gmail_logo.png" width="150" height="150">
+<p>שימו לב! אפליקציה זו נועדה למי שאינו מצליח להתחבר לחשבון גוגל שלו דרך האפליקציה המובנית במכשיר. אפליקציה זאת מופעלת על ידי תצוגת אתר אינטרנט ולא תקבלו התראות למכשיר כשתקבלו מייל חדש. יש להיכנס מדי פעם לאפליקציה ולבדוק ידנית אם קיבלתם מייל חדש. יש להפעיל שליטת עכבר באפליקציה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Gmail.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- WAZE -->
+<div class="column transport"> <div class="content"> <h3>Waze - נסיעה בדרכים</h3>
+<img src="assets/logos/waze_logo.png" width="180" height="180">
+<p>וויז היא אפליקציית הניווט ודיווחי התנועה הגדולה בעולם המתבססת על קהילת משתמשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Waze.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- MOOVIT -->
+<div class="column transport"> <div class="content"> <h3>Moovit - תחבורה ציבורית</h3>
+<img src="assets/logos/moovit_logo.png" width="160" height="160">
+<p>מוביט מספקת לוחות זמנים עדכניים כפי שמפרסמות מפעילות התחבורה הציבורית, ובנוסף, גם את זמני ההגעה בזמן אמת של הקו, במקרים בהם על הקו מותקן מכשיר GPS.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Moovit.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- PANGO -->
+<div class="column transport"> <div class="content"> <h3>Pango - פנגו</h3>
+<img src="assets/logos/pango_logo.png" width="160" height="160">
+<p>אפליקציית חניה מתקדמת שמונעת דוחות וחוסכת זמן וכסף. חניה מהנייד בכחול לבן, שירות טסט וטיפול עד הבית, יציאה מהירה מחניונים ועוד מגוון פתרונות לנהג ולרכב.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Pango.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- HOSPITALS -->
+<div class="column tools"> <div class="content"> <h3>קופות החולים</h3>
+<img src="assets/logos/hospitals_logo.png" width="180" height="180">
+<p>כל קופות החולים מותאם לשיאומי מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Hospitals.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- BANKS -->
+<div class="column tools"> <div class="content"> <h3>בנקים</h3>
+<img src="assets/logos/banks_logo.png" width="160" height="160">
+<p>כל אתרי הבנקים מותאם לשיאומי מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Banks.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- MIZRAHI 
+<div class="column tools"> <div class="content"> <h3>מזרחי טפחות</h3>
+<img src="assets/logos/mizrahi_logo.png" width="144" height="144">
+<p>בנק מזרחי טפחות מותאם לשיאומי מקשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Mizrahi.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+ -->
+	
+<!-- PEPPER 
+<div class="column tools"> <div class="content"> <h3>Pepper</h3>
+<img src="assets/logos/pepper_logo.png" width="144" height="144">
+<p>בנק פפר מותאם לשיאומי מקשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Pepper.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+-->
+	
+<!-- myVisit -->
+<div class="column tools"> <div class="content"> <h3>myVisit - זימון תורים</h3>
+<img src="assets/logos/myvisit_logo.png" width="160" height="160">
+<p>אפליקציה לזימון תורים במשרדי הרישוי ובשירותים ציבוריים. יש להשתמש בגלילת העכבר בכפתור הניווט האמצעי + כפתורי הניווט לצדדים בו זמנית.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/MyVisit.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- B-Leumi -->
+<div class="column tools"> <div class="content"> <h3>ביטוח לאומי - שירות אישי</h3>
+<img src="assets/logos/bleumi_logo.png" width="180" height="180">
+<p>אתר שירות אישי של ביטוח לאומי מותאם לשיאומי.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Leumi.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Jewish Music -->
+<div class="column media"> <div class="content"> <h3>רדיו Jewish Music</h3>
+<img src="assets/logos/jewishradio_logo.png" width="160" height="160">
+<p>רדיו עם שירים יהודיים מותאם במיוחד לשיאומי מקשים. ניתן להפעלה גם ברקע.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/JewishMusic.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- RadioFM Israel -->
+<div class="column media"> <div class="content"> <h3>רדיו FM ישראל</h3>
+<img src="assets/logos/radiofm_logo.png" width="144" height="144">
+<p>רדיו FM ישראל עם כל תחנות הרדיו בישראל.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/RadioFM.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Jradio -->
+<div class="column media"> <div class="content"> <h3>תחנות רדיו יהודי</h3>
+<img src="assets/logos/jradio_logo.png" width="160" height="160">
+<p>תחנות רדיו נוספות עם שירים יהודיים מותאם במיוחד לשיאומי מקשים. ניתן להפעלה גם ברקע.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Jradio.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- VLC Player -->
+<div class="column media"> <div class="content"> <h3>נגן מדיה VLC</h3>
+<img src="assets/logos/vlc_logo.png" width="160" height="160">
+<p>נגן המדיה הכי טוב למכשיר להאזנת שמע וצפייה בוידאו. יש אפשרות מובנית של סיבוב מסך.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/VLC.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- ME -->
+<div class="column tools"> <div class="content"> <h3>זיהוי שיחות - Me</h3>
+<img src="assets/logos/me_logo.png" width="160" height="160">
+<p>מי היא אפליקציית זיהוי השיחות והגנה מפני ספאם הטובה ביותר עבור האנדרואיד.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Me.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- דואר ישראל -->
+<div class="column tools"> <div class="content"> <h3>דואר ישראל</h3>
+<img src="assets/logos/israelpost_logo.png" width="180" height="180">
+<p>מעקב משלוחים, איתור מיקוד, ושירותים נוספים באפליקציה של דואר ישראל.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/IsraelPost.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+ 
+<!-- GOOGLE MAPS  -->
+<div class="column gapps transport"> <div class="content"> <h3>Google Maps - מפות</h3>
+<img src="assets/logos/maps_logo.png" width="180" height="180">
+<p>מפות גוגל לשיאומי מקשים. יש להפעיל שליטת עכבר באפליקציה. הטעינה הראשונה לוקחת קצת זמן. שימו לב שלאחר ההתקנה האפליקציה נמצאת בתיקיית היישומים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GoogleMaps.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- GOOGLE TRANSLATE  -->
+<div class="column gapps"> <div class="content"> <h3>Google Translate - תרגום שפות</h3>
+<img src="assets/logos/translate_logo.png" width="180" height="180">
+<p>תרגום טקסט בין 103 שפות באמצעות הקלדה, הקלטה, ודרכים נוספות. אפשר להוריד את המילונים ולהשתמש בתרגום אף ללא חיבור אינטרנט.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GoogleTranslate.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Xodo Docs -->
+<div class="column tools"> <div class="content"> <h3>Xodo Docs</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/xodo_logo.png" width="160" height="160">
+<p>קוראי קבצי PDF איכותי לשיאומי</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Xodo.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- AlReader -->
+<div class="column tools"> <div class="content"> <h3>AlReader - קורא מסמכים</h3>
+<img src="assets/logos/alreader_logo.png" width="160" height="160">
+<p>קורא מסמכים תומך מקשים לשיאומי. ניתן גם לקרוא קבצי וורד.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/AlReader.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- TEXTRA -->
+<div class="column gapps"> <div class="content"> <h3>Textra - הודעות</h3>
+<img src="assets/logos/textra_logo.png" width="160" height="160">
+<p>אפליקציית הודעות</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Textra.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- GOOGLE KEEP  -->
+<div class="column gapps"> <div class="content"> <h3>Google Keep - הערות גוגל</h3>
+<img src="assets/logos/keep_logo.png" width="192" height="192">
+<p>הוספת הערות, רשימות ותמונות ל- Google Keep. אפשר גם להקליט תזכיר קולי ולמצוא אותו אחר כך בקלות בחיפוש הערות.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GoogleKeep.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- GOOGLE CALENDAR -->
+<div class="column gapps"> <div class="content"> <h3>Google Calendar - יומן גוגל</h3>
+<img src="assets/logos/calendar_logo.png" width="192" height="192">
+<p>דרכים שונות לצפייה ביומן שלך - עבור במהירות בין תצוגת חודש, שבוע ויום. אירועים מ- Gmail מתווספים אוטומטית ללוח השנה שלך.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GoogleCalendar.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- GOOGLE PHOTOS -->
+<div class="column gapps"> <div class="content"> <h3>Google Photos - תמונות גוגל</h3>
+<img src="assets/logos/photos_logo.png" width="180" height="180">
+<p>תמונות השמורות באיחסון של חשבון גוגל</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GooglePhotos.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- HANGOUTS -->
+<div class="column gapps"> <div class="content"> <h3>Hangouts - הנגאאוט</h3>
+<img src="assets/logos/hangouts_logo.png" width="180" height="180">
+<p>Hangouts הוא שירות מסרים מיידיים, שיחות קוליות ווידאו-צ'אט, המוצע חינם למשתמשי גוגל.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Hangouts.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- MESSAGES -->
+<div class="column gapps"> <div class="content"> <h3>הודעות</h3>
+<img src="assets/logos/messages_logo.png" width="180" height="180">
+<p>אפליקציית ההודעות של גוגל</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Messages.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Google Auth -->
+<div class="column gapps"> <div class="content"> <h3>המאמת של גוגל</h3>
+<img src="assets/logos/auth_logo.png" width="160" height="160">
+<p>המאמת של גוגל. יש להפעיל שליטת עכבר באפליקציה</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GoogleAuth.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- WORD -->
+<div class="column tools"> <div class="content"> <h3>Word - וורד</h3>
+<img src="assets/logos/word_logo.png" width="160" height="160">
+<p>Word לשיאומי מקשים. מומלץ להשתמש במקלדת עם הזיהוי הקולי בעת כתיבת מסמכים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Word.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- POWERPOINT -->
+<div class="column tools"> <div class="content"> <h3>PowerPoint</h3>
+<img src="assets/logos/powerpoint_logo.png" width="160" height="160">
+<p>PowerPoint לשיאומי מקשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/PowerPoint.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- GOLAN TELECOM -->
+<div class="column tools"> <div class="content"> <h3>גולן טלקום</h3>
+<img src="assets/logos/golan_logo.png" width="180" height="180">
+<p>גולן טלקום לשיאומי מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Golan.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- SIM Change -->
+<div class="column tools"> <div class="content"> <h3>התראה על שינוי סים</h3>
+<img src="assets/logos/simchange_logo.png" width="180" height="180">
+<p>התראה על שינוי סים מפני גניבה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/SIMChange.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Foldplay -->
+<div class="column media"> <div class="content"> <h3>Foldplay - נגן תיקייה</h3>
+<img src="assets/logos/foldplay_logo.png" width="180" height="180">
+<p>נגן שירים לפי תיקיית קבצים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Foldplay.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Wallpapers -->
+<div class="column tools"> <div class="content"> <h3>רקעים לשיאומי</h3>
+<img src="assets/logos/wallpapers_logo.png" width="180" height="180">
+<p>רקעים יפים לשיאומי מקשים. הוספתי גם תמונות של צדיקים. ניתן להשתמש באפליקציה באמצעות המקשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Wallpapers.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- File Manager -->
+<div class="column tools"> <div class="content"> <h3>מנהל קבצים+</h3>
+<img src="assets/logos/filemanager_logo.png" width="180" height="180">
+<p>מנהל קבצים מתקדם לשיאומי מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/FileManagerPlus.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Applock -->
+<div class="column tools"> <div class="content"> <h3>נועל יישומים</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/applock_logo.png" width="140" height="140">
+<p>שימו לב להוראות: יש להשתמש במקלדת קין המתקדמת, להפעיל את העכבר בפעם הראשונה ליצירת סיסמא, ואחר כך לשנות את תבנית הסיסמא לתווים דרך ההגדרות, בכדי להשתמש בנעילה ללא צורך בעכבר.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Applock.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Screen Recorder -->
+<div class="column tools"> <div class="content"> <h3>הסרטת מסך</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/rec_logo.png" width="180" height="180">
+<p>הסרטת מסך המכשיר.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Recorder.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Backup -->
+<div class="column tools"> <div class="content"> <h3>גיבוי שיחות והודעות</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/backup_logo.png" width="160" height="160">
+<p>גיבוי שיחות, הודעות, אנשי קשר, יומני שיחות, ולוח שנה, למכשיר <b>ולגוגל דרייב</b>. נערך מחדש והותאם במיוחד לשיאומי.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Backup.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Shopping -->
+<div class="column tools"> <div class="content"> <h3>רשימת קניות</h3>
+<img src="assets/logos/shopping_logo.png" width="160" height="160">
+<p>רשימת קניות מסתנכרנת. ניתן ליצור חשבון באפליקציה ולהתחבר אליו. לא ניתן להתחבר דרך גוגל.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Shopping.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- ColorNote -->
+<div class="column tools"> <div class="content"> <h3>פתקים - ColorNote</h3>
+<img src="assets/logos/colornote_logo.png" width="180" height="180">
+<p>אפליקציה נוחה מאוד לכתיבת פתקים, רשימות והערות.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/ColorNote.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- SoundAbout -->
+<div class="column tools"> <div class="content"> <h3>תיקון בעיה באוזניות</h3>
+<img src="assets/logos/soundabout_logo.png" width="92" height="92">
+<p>נא להוריד רק אם קרה לכם את הבעיה של האוזניה!
+אפליקציה שמתקנת את בעיית האוזנייה הידועה.
+לבחור בלשונית הראשונה "ON - No Status"
+ובלשונית השלישית "Earpiece".</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/SoundAbout.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Volume Control -->
+<div class="column tools"> <div class="content"> <h3>שליטה בווליום עם העכבר</h3>
+<img src="assets/logos/volume_logo.png" width="160" height="160">
+<p>היכנס לאפליקציה ויופיע לך על המסך כפתורים לשליטה בעוצמת הווליום באמצעות העכבר.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/VolumeControl.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Rotate Control -->
+<div class="column tools"> <div class="content"> <h3>סיבוב מסך</h3>
+<img src="assets/logos/rotate_logo.png" width="160" height="160">
+<p>אפליקציה לשליטה על סיבוב מסך התצוגה באפליקציות.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Rotation.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Vibrate Control -->
+<div class="column tools"> <div class="content"> <h3>שליטה ברטט</h3>
+<img src="assets/logos/vibrate_logo.png" width="160" height="160">
+<p>אפליקציה לשליטה על הרטט בשימוש האפליקציות. אפשר למשל להאריך את משך הרטט בתזכורת של הלוח שנה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Vibrate.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Bluetooth Contacts -->
+<div class="column tools"> <div class="content"> <h3>העברת אנשי קשר בבלוטוס</h3>
+<img src="assets/logos/bluetooth_logo.png" width="180" height="180">
+<p>אפליקציה להעברת אנשי קשר באמצעות הבלוטוס. ניתן להעביר אנשי קשר גם ממכשירי הנוקיה הפשוטים. נא להפעיל שליטת עכבר כדי שתוכלו לבחור באחד המכשירים הגלויים ברשימה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/BluetoothContacts.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- MTcam -->
+<div class="column tools"> <div class="content"> <h3>מצלמת MTcam Pro</h3>
+<img src="assets/logos/mtcam_logo.png" width="180" height="180">
+<p>חיבור מצלמת MTcam לשיאומי מקשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/MTCam.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!--Canon -->
+<div class="column tools"> <div class="content"> <h3>מצלמת Canon</h3>
+<img src="assets/logos/camera_logo.png" width="180" height="180">
+<p>מצלמת קנון</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Canon.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Smart Life -->
+<div class="column tools"> <div class="content"> <h3>Smart Life - בית חכם</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/smartlife_logo.png" width="160" height="160">
+<p>בית חכם - שליטה על מוצרי חשמל באמצעות המכשיר.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/SmartLife.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- MiFit -->
+<div class="column tools"> <div class="content"> <h3>Mi Fit</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/MiFit_logo.png" width="160" height="160">
+<p>Mi Fit לשיאומי מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/MiFit.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Guitar Tuner -->
+<div class="column tools"> <div class="content"> <h3>מכוון גיטרה</h3>
+<img src="assets/logos/gtuner_logo.png" width="144" height="144">
+<p>כיוון גיטרה בדרך פשוטה ונוחה באמצעות המכשיר. יש להפעיל שליטת עכבר באפליקציה כדי ללחוץ על התפריט.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GuitarTuner.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- RingtoneMaker -->
+<div class="column tools"> <div class="content"> <h3>יוצר רינגטונים</h3>
+<img src="assets/logos/ringtone_logo.png" width="180" height="180">
+<p>יצירה וחתיכת רינגטונים לשיאומי. האפליקציה תומכת במקשים במלואה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/RingtoneMaker.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+ 
+<!-- Nedarim -->
+<div class="column tools"> <div class="content"> <h3>נדרים פלוס</h3>
+<img src="assets/logos/nedarim_logo.png" width="180" height="180">
+<p>נדרים פלוס.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Nedarim.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- Weather
+<div class="column tools"> <div class="content"> <h3>מזג האוויר</h3>
+<img src="assets/logos/weather_logo.png" width="180" height="180">
+<p>מזג האוויר בכל הערים בארץ.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Weather.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+-->
+	
+<!-- Kumta -->
+<div class="column tools"> <div class="content"> <h3>כומתה - צבע אדום</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/kumta_logo.png" width="180" height="180">
+<p>התרעות צבע אדום</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Kumta.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- Yedidim -->
+<div class="column tools"> <div class="content"> <h3>ידידים מתנדבים</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/yedidim_logo.png" width="160" height="160">
+<p>ידידים כוננות</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Yedidim.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Kol Rega -->
+<div class="column tools"> <div class="content"> <h3>כל רגע</h3>
+<img src="assets/logos/kolrega_logo.png" width="180" height="180">
+<p>אתר החדשות כל רגע</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/KolRega.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Kikar Hashabat -->
+<div class="column tools"> <div class="content"> <h3>כיכר השבת</h3>
+<img src="assets/logos/kikar_logo.png" width="180" height="180">
+<p>אתר החדשות והתוכן לציבור הדתי</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/KikarHashabat.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- BHADRE HADARIM -->
+<div class="column tools"> <div class="content"> <h3>בחדרי חרדים</h3>
+<img src="assets/logos/bh_logo.png" width="180" height="180">
+<p>אתר חדשות לציבור הדתי</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Bh.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- HebDate -->
+<div class="column tools"> <div class="content"> <h3>לוח שנה עברי</h3>
+<img src="assets/logos/hebdate_logo.png" width="156" height="156">
+<p>לוח שנה עברי<br>יש להפעיל שליטת עכבר באפליקציה</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/HebDate.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- HebrewBar -->
+<div class="column tools"> <div class="content"> <h3>עברי על הבר</h3>
+<img src="assets/logos/hebrewbar_logo.png" width="144" height="144">
+<p>הצגת התאריך העברי בשורת ההתראות. ניתן גם להציג את זמני היום לפי איזור המגורים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/HebrewBar.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- SEFARIA -->
+<div class="column books"> <div class="content"> <h3>ספריא - מאגר ספרי קודש</h3>
+<img src="assets/logos/sefaria_logo.png" width="240" height="150">
+<p>ספריא מביאה 3,000 שנים של טקסטים יהודיים בעברית ובתרגום לאנגלית (תנ”ך, משנה, תלמוד ועוד) לסמארטפון. ניתן לחפש מילות מפתח או לדפדף בתוכן העניינים בכדי לראות מקורות, תרגומים ופרשנויות. נפח הספריה כולה (כ500 מגה) מתאים לאחסון בטלפון עצמו כך שניתן להשתמש באפליקציה ללא חיבור לאינטרנט.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Sefaria.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- YESOD  -->
+<div class="column books"> <div class="content"> <h3>ובלכתך בדרך</h3>
+<img src="assets/logos/bb_logo.png" width="160" height="160">
+<p>מאגר נוסף של ספרי קודש ללא צורך באינטרנט</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/OnYourWay.apk"
+class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- SMARTDAT  -->
+<div class="column books"> <div class="content"> <h3>סמארט דת</h3>
+<img src="assets/logos/smartdat_logo.png" width="144" height="144">
+<p>סידור, תהילים, שניים מקרא, זמני היום, לוח ברכות, ומילון ארמי-עברי! האפליקציה הותאמה למקשים.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/SmartDat.apk"
+class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- Arutz Meir -->
+<div class="column media"> <div class="content"> <h3>ערוץ מאיר</h3>
+<img src="assets/logos/meir_logo.png" width="160" height="160">
+<p>שיעורי תורה להאזנה בכל הנושאים והעניינים. תורת ארץ ישראל.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/ArutzMeir.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+  
+<!-- Arutz 2000 -->
+<div class="column media"> <div class="content"> <h3>ערוץ 2000</h3>
+<img src="assets/logos/2000_logo.png" width="160" height="160">
+<p>שיעורי תורה נוספים להאזנה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Arutz2000.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Kol Halashon -->
+<div class="column media"> <div class="content"> <h3>קול הלשון</h3>
+<img src="assets/logos/kolhalashon_logo.png" width="160" height="160">
+<p>אפליקציית קול הלשון להזאנת שיעורי תורה מרבנים רבים. האפליקציה הותאמה במיוחד למקשים ועיצוב חדש.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/KolHalashon.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- KEHATI -->
+<div class="column books"> <div class="content"> <h3>משניות מבוארות - קהתי</h3>
+<img src="assets/logos/kehati_logo.png" width="240" height="150">
+<p>משניות "קהתי" (גם באנגלית) עם פירוש ה"ברטנורא" ו"משנה סדורה" על כל ששה סדרי משנה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Kehati.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Hitas -->
+<div class="column books"> <div class="content"> <h3>חת"ת</h3>
+<img src="assets/logos/hitas_logo.png" width="160" height="160">
+<p>חומש תהילים תניא. האפליקציה מגיעה ברוסית-עברית, ניתן להיכנס ללימוד היומי ולשנות בהגדרות לעברית בלבד.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Hitas.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- DVAR MALCHUT -->
+<div class="column books"> <div class="content"> <h3>דבר מלכות</h3>
+<img src="assets/logos/malchut_logo.png" width="240" height="150">
+<p>חוברת 'דבר מלכות' בממשק נוח וידידותי.
+החוברת מתעדכנת באופן אוטומטי מידי שבוע.
+ניתן ללמוד ולעיין בכל הדבר מלכות ובשיעורים היומיים: חת"ת, חומש, תניא, היום יום, רמב"ם, ספר המצוות.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/DvarMalchut.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- TORAH & MEFARSHIM -->
+<div class="column books"> <div class="content"> <h3>תורה עם מפרשים</h3>
+<img src="assets/logos/mefarshim_logo.png" width="240" height="150">
+<p>תלמדו חומש עם תרגום לאנגלית וצרפתית ומלא מפרשים:
+-אונקלוס -יונתן -רש"י -שפתי חכמים -אבן עזרא  -הרמב"ן -ספורנו -בעל הטורים -אור החיים  -כלי יקר -דעת זקנים
+שניים מקרא ואחד תרגום בקלות!</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Mefarshim.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- BENISH HAY -->
+<div class="column books"> <div class="content"> <h3>בן איש חי - הלכות</h3>
+<img src="assets/logos/benish_logo.png" width="240" height="150">
+<p>בן איש חי הוא ספר דרשות לפי פרשיות השבוע, ובו ביאור על פרשת השבוע והלכות שחובר על ידי הרב יוסף חיים מבגדאד ועל שמו הוא מכונה "הבן איש חי".
+הספר התקבל כספר הלכה קובע בחלק מקהילות המזרח התיכון ובעיקר על יהדות בבל. 
+הספר מחולק ל"שנה ראשונה" ו"שנה שניה" והשנים מחולקות לפרשיות השבוע.
+בתחילת הפרשה מובאים ענייני אגדה, ואחריהם ההלכות.
+הספר כתוב בצורה ברורה, נעימה וקצרה. 
+לעיתים רבות פוסק הרב כדברי הזוהר הקדוש והאר"י.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/BenishHay.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- DAF HAYOMI
+<div class="column books"> <div class="content"> <h3>הדף היומי</h3>
+<img src="assets/logos/dafyomi_logo.png" width="144" height="144">
+<p>פורטל הדף היומי הוא מרכז התכנים הגדול ביותר על הגמרא, דיונים וכלי עזר ללומדי הדף היומי לפי סדר דפי התלמוד הבבלי.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/DafYomi.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+-->
+	
+<!-- HALACHA TEMAN -->
+<div class="column books"> <div class="content"> <h3>הלכה יומית לק"ק תימן</h3>
+<img src="assets/logos/halacha_teman_logo.png" width="180" height="180">
+<p>הלכה יומית לבני קהילות תימן.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/HalachaTeman.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- TAMNIDOR -->
+<div class="column books"> <div class="content"> <h3>תמנידור - סידור תמני</h3>
+<img src="assets/logos/tamnidor_logo.png" width="180" height="180">
+<p>תימנידור הוא סידור תימני בנוסח בלדי שמראה את התפילה המתאימה לפי אותו היום למשל: בראש חודש, חנוכה סוכות וכו'</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Tamnidor.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- SidurHabad -->
+<div class="column books"> <div class="content"> <h3>סידור חב"ד</h3>
+<img src="assets/logos/sidurhabad_logo.png" width="180" height="180">
+<p>סידור בנוסח חב"ד<br>האפליקציה תומכת מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/SidurHabad.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- TORAT YASHIYAHU -->
+<div class="column books"> <div class="content"> <h3>תורת יאשיהו</h3>
+<img src="assets/logos/yash_logo.png" width="180" height="180">
+<p>אפליקצית מכון "תורת יאשיהו" עוסק בהפצת ספריו הקדושים של כבוד האדמו"ר רבי יאשיהו יוסף פינטו שליט"א</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/ToratYashiyahu.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- HIDABROOT -->
+<div class="column media"> <div class="content"> <h3>הידברות</h3>
+<img src="assets/logos/hidabroot_logo.png" width="170" height="170">
+<p>הידברות - מכון היהדות הגדול בעולם</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Hidabroot.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- PNINEY HALACHA -->
+<div class="column books"> <div class="content"> <h3>פניני הלכה</h3>
+<img src="assets/logos/pnineyhalacha_logo.png" width="240" height="150">
+<p>האפליקציה הרשמית לסדרת ספרי ההלכה "פניני הלכה" של הרב אליעזר מלמד שליט"א.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/PnineyHalacha.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- SHULHAN ARUCH -->
+<div class="column books"> <div class="content"> <h3>שולחן ערוך אורח חיים</h3>
+<img src="assets/logos/shulhan_logo.png" width="240" height="150">
+<p>שולחן ערוך אורח חיים עם משנה ברורה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/ShulhanAruch.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- TANYA -->
+<div class="column books"> <div class="content"> <h3>תניא</h3>
+<img src="assets/logos/tanya_logo.png" width="240" height="150">
+<p>ספר ליקוטי אמרים "תניא"
+מאת רבי שניאור זלמן מליאדי - האדמו"ר הזקן.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Tanya.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Tehilim -->
+<div class="column books"> <div class="content"> <h3>תהילים עם תפילות נוספות</h3>
+<img src="assets/logos/tehilim_logo.png" width="160" height="160">
+<p>ספר תהילים מחולק לפי ימים, פרקים, או ספרים, עם סימניה, ותפילות נוספות. יש גם תיקון הכללי.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Tehilim.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- SIPUREY MAASIOT -->
+<div class="column books"> <div class="content"> <h3>סיפורי מעשיות</h3>
+<img src="assets/logos/sipur_logo.png" width="256" height="160">
+<p>סיפורי מעשיות מאת ר' נחמן מברסלב כולל תיקון הכללי.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/SipureyMaasiot.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Gold Miner -->
+<div class="column games" > <div class="content"> <h3>מכרה הזהב</h3>
+<img src="assets/logos/goldminer_logo.png" width="160" height="160">
+<p>משחק מאתגר בו תצטרכו לאסוף את הזהב הנדרש, ולעמוד ביעדים תוך זמן קצר.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/GoldMiner.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Fish Spikes -->
+<div class="column games"> <div class="content"> <h3>דגים וקוצים</h3>
+<img src="assets/logos/fishspikes_logo.png" width="160" height="160">
+<p>עזרו לדג להתחמק מהקוצים ולשרוד כמה שיותר זמן.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/FishSpikes.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Knife Hit -->
+<div class="column games"> <div class="content"> <h3>חרב קליעה</h3>
+<img src="assets/logos/hitknife_logo.png" width="160" height="160">
+<p>לקלוע חרבות לתוך העיגול במרכז מבלי לפגוע בחרבות אחרות. יש להפעיל שליטת עכבר באפליקציה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/KnifeHit.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- Rider -->
+<div class="column games"> <div class="content"> <h3>רוכב - Rider</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/rider_logo.png" width="160" height="160">
+<p>משחק רכיבה. יש להפעיל עכבר באפליקציה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Rider.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Cars -->
+<div class="column games"> <div class="content"> <h3>משחק מכוניות</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/cars_logo.png" width="160" height="160">
+<p>משחק מכוניות. יש להפעיל עכבר באפליקציה.</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Cars.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+		
+<!-- JAR Games -->
+<div class="column games"> <div class="content"> <h3>משחקי JAR</h3>
+<img src="assets/logos/jar_logo.png" width="160" height="160">
+<p>מריץ משחקים של קבצי JAR</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/JARGames.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Sudoku -->
+<div class="column games"> <div class="content"> <h3>סודוקו</h3>
+<img src="assets/logos/sudoku_logo.png" width="160" height="160">
+<p>משחק סודוקו תומך מקשים</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Sudoku.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Solitaire -->
+<div class="column games"> <div class="content"> <h3>סוליטייר</h3>
+<img src="assets/logos/solitaire_logo.png" width="160" height="160">
+<p>משחק קלפים סוליטייר</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Solitaire.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Spider -->
+<div class="column games"> <div class="content"> <h3>ספיידר</h3>
+<img src="assets/logos/spider_logo.png" width="160" height="160">
+<p>משחק קלפים ספיידר</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Spider.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Loop -->
+<div class="column games"> <div class="content"> <h3>משחק הלולאות</h3>
+<img src="assets/logos/loop_logo.png" width="144" height="144">
+<p>משחק פאזל מאתגר של לולאות אינסופיות</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/Loop.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Hexagon King -->
+<div class="column games"> <div class="content"> <h3>מלך המשושים</h3>
+<img src="assets/logos/hexagon_logo.png" width="144" height="144">
+<p>משחק חשיבה מאתגר</p>
+<a href="https://webanddroid.com/Developer/Qin1s/Apps/HexagonKing.apk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+</div></div></div>
+<script src="script.js"></script>
+
+<br><br><div id="copyright"><br>
+<img src="assets/logos/ic_kosher.png" alt="החנות הכשרה" width="72" height="72">
+
+<class="c">
+<p>© נבנה על ידי שלום כהן</p>
+</div>
 
 </body>
 </html>
